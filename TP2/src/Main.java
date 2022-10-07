@@ -28,6 +28,13 @@ public class Main {
         if (entier%2==0) {
             System.out.println("Cet entier est pair");
         } else { System.out.println("Cet entier est impair" ); }
-
+    }
+    public static void max() {
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Selectionner l'entier 1 ?");
+        int entier = scanner2.nextInt();
+        if (entier%2==0) {
+            System.out.println("Cet entier est pair");
+        } else { System.out.println("Cet entier est impair" ); }
     }
 }
