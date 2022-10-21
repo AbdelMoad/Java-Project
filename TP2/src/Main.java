@@ -5,13 +5,13 @@ public class Main {
         egaliteStr();
     }
     public static void discriminant() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner1 = new Scanner(System.in);
         System.out.println("Quelle est la valeur de a ?");
-        int a = scanner.nextInt();
+        int a = scanner1.nextInt();
         System.out.println("Quelle est la valeur de b ?");
-        int b = scanner.nextInt();
+        int b = scanner1.nextInt();
         System.out.println("Quelle est la valeur de c ?");
-        int c = scanner.nextInt();
+        int c = scanner1.nextInt();
 
         int delta = (int) (Math.pow(b, 2)- 4 * a * c);
         float s1 = (float) ((-b+Math.sqrt(delta))/(2*a));
@@ -45,8 +45,8 @@ public class Main {
         String chaine1 = scanner2.nextLine();
         System.out.println("Selectionner la deuxieme chaine de caractère");
         String chaine2 = scanner2.nextLine();
-        boolean test4 = chaine1.equals(chaine2);
-        System.out.println(test4);
+        boolean test3 = chaine1.equals(chaine2);
+        System.out.println(test3); //test3
 
     }
 
