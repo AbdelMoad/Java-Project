@@ -8,7 +8,9 @@ public abstract class Combattant {
     public String getName() {
         return name;
     }
-    public int
+    public int getHealthPoint() {
+        return healthPoint;
+    }
     private String name;
     private int healthPoint;
 }
