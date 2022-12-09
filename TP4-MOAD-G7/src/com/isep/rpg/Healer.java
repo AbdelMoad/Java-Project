@@ -29,6 +29,9 @@ public class Healer extends SpellCaster{
     }
 
     }
+    private void setMana(Combattant combattant){
+        
+    }
     private HealingSpell healingSpell;
     private Food food;
 private LifePotion lifePotion;

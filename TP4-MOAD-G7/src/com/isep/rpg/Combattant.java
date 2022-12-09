@@ -19,6 +19,7 @@ public abstract class Combattant {
     public abstract void setFood(Combattant combattant);
 
 
+
     
     public void loose(int hp) {
         // healthPoint = healthPoint - hp
@@ -34,9 +35,13 @@ public abstract class Combattant {
         healthPoint += hp;
 
     }
+    public void M(int mana){
+        manaPoint +=mana;
+    }
 
     private String name;
     protected int healthPoint;
+    protected int manaPoint;
 
 }
 
