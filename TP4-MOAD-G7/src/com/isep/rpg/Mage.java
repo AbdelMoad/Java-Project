@@ -27,7 +27,7 @@ public class Mage extends SpellCaster {
             food = (Food) item;
         }
         else if (item instanceof Potion) {
-            potion = (Potion) item;
+            lifePotion = (LifePotion) item;
         } else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
@@ -41,4 +41,5 @@ public class Mage extends SpellCaster {
 
     private Tricks tricks;
     private Food food;
+    private LifePotion lifePotion;
 }

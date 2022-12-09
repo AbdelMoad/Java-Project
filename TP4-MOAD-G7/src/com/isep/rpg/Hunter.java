@@ -24,13 +24,13 @@ public class Hunter extends Hero {
             food = (Food) item;
         }
         else if (item instanceof Potion) {
-            potion = (Potion) item;
+            lifePotion = (LifePotion) item;
         } else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
     }
 
     private Bow bow;
-    private Potion potion;
+    private LifePotion lifePotion;
     private Food food;
 }

@@ -14,8 +14,8 @@ public class Healer extends SpellCaster{
     } else if (item instanceof Food) {
             food = (Food) item;
         }
-        else if (item instanceof Potion) {
-            potion = (Potion) item;
+        else if (item instanceof LifePotion) {
+            lifePotion = (LifePotion) item;
         } else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
@@ -31,7 +31,7 @@ public class Healer extends SpellCaster{
     }
     private HealingSpell healingSpell;
     private Food food;
-
+private LifePotion lifePotion;
 
 
 }

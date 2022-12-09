@@ -1,10 +1,11 @@
 package com.isep.rpg;
 
-public class LifePotion extends Potion {
+public class LifePotion extends Consumable {
 
-    public LifePotion(String name, int healthPoint) {
-        super(name, healthPoint);
+    public LifePotion(String name) {
+        super(name,5);
         this.healthPoint = healthPoint;
+
     }
 
     public int getHealthPoint() {
