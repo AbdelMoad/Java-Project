@@ -1,12 +1,37 @@
 package com.isep.rpg;
 
 public class Healer extends SpellCaster{
-    public Healer(String n, int h) {
-        super(n, h);
+    public Healer(String n, int h,int mana) {
+        super(n, h,mana);
+        this.mana=mana;
+    }
+    public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
+    }
+    @Override
+    public void take(Item item) {
+        if (item instanceof HealingSpell) {
+       healingSpell  = (HealingSpell) item;
+    } else if (item instanceof Food) {
+            food = (Food) item;
+        }
+        else if (item instanceof Potion) {
+            potion = (Potion) item;
+        } else {
+            Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
+        }
     }
 
     @Override
-    public void fight(Combattant combattant) {
+    public void fight(Combattant combattant) { if (mana!=0) { combattant.heal(healingSpell.getHealthPoint()); mana=mana-1;
+    } else {
+        Game.displayMessage("Oups ! Il y a plus de mana");
 
     }
+
+    }
+    private HealingSpell healingSpell;
+    private Food food;
+
+
+
 }
