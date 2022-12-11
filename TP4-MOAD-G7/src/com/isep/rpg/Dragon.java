@@ -10,6 +10,8 @@ public class Dragon extends Enemy{
     public void fight(Combattant combattant) {
         combattant.loose( getDamagePoints());
     }
+    public void Protect(Combattant combattant){ 
+    }
 
     @Override
     public void setFood(Combattant combattant) {

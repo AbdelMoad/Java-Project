@@ -15,7 +15,8 @@ public class SuperDragon extends Enemy{
     public void setFood(Combattant combattant) {
 
     }
-
+    public void Protect(Combattant combattant){
+    }
     public int getDamagePoints() {
         return damagePoints;
     }
