@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
-
-
-
-
     public Game(InputParser inputParser) {
         int choix=0;
         this.inputParser = inputParser;
@@ -30,7 +26,8 @@ public class Game {
             Hero ronal = new Warrior("Warrior",10);
             ronal.take( new Weapon("knife", 5) );
             ronal.take( new Food("Apple", 1) );
-            ronal.take(new LifePotion("Potion de vie"));
+            ronal.take(new Armures("Warrior Armures",3));
+
             heros.add(ronal);
             System.out.println("Combien ?");
             int n = sc.nextInt();
@@ -142,6 +139,7 @@ public class Game {
                 System.out.println("Quel est ton choix ?");
                 System.out.println(" 1- Attaque/Guérir");
                 System.out.println(" 2- Nourriture");
+                System.out.println(" 3- Se défendre");
                 int choix = sc.nextInt();
                 if (choix == 1){ // Riposte du gentil, s'il n'est pas vaincu
                     displayMessage("Le gentil " + goodOne.getName()
@@ -152,6 +150,8 @@ public class Game {
                     }else {
                         goodOne.fight(badOne);}
                 }else if (choix == 2){goodOne.setFood(goodOne);
+                } else if (choix==3) {goodOne.Protect(badOne);
+
                 }
 
                 if (badOne.getHealthPoint() <= 0) {

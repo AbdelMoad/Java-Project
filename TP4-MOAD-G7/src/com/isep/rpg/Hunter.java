@@ -8,7 +8,16 @@ public class Hunter extends Hero {
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
     }
 
+    @Override
+    public void Protect(Combattant combattant){ combattant.protect(armures.getProtectPoints());
+    }
+
     private int arrow;
+
+
+    public void Protect(Hero hero){ hero.protect(armures.getProtectPoints());
+    }
+
     @Override
     public void fight(Combattant combattant) { if (arrow!=0) { combattant.loose(bow.getDamagePoints()); arrow=arrow-1;
         } else {Game.displayMessage("Oups ! Il y a plus de fleches");} ;
@@ -25,7 +34,11 @@ public class Hunter extends Hero {
         }
         else if (item instanceof Potion) {
             lifePotion = (LifePotion) item;
-        } else {
+        }
+        else if (item instanceof Armures) {
+            armures = (Armures) item;
+        }
+        else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
     }
@@ -33,4 +46,5 @@ public class Hunter extends Hero {
     private Bow bow;
     private LifePotion lifePotion;
     private Food food;
+    private Armures armures;
 }

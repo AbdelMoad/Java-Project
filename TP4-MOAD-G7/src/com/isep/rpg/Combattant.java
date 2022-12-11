@@ -17,6 +17,7 @@ public abstract class Combattant {
 
     public abstract void fight(Combattant combattant);
     public abstract void setFood(Combattant combattant);
+    public abstract void Protect(Combattant combattant);
 
 
 
@@ -24,6 +25,11 @@ public abstract class Combattant {
     public void loose(int hp) {
         // healthPoint = healthPoint - hp
         healthPoint -= hp;
+
+    }
+    public void protect(int hp) {
+        // healthPoint = healthPoint - hp
+        damagePoints -= damagePoints;
 
     }
 

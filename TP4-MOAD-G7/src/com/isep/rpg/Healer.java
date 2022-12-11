@@ -7,6 +7,10 @@ public class Healer extends SpellCaster{
     }
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
     }
+    public void Protect(Combattant combattant){
+
+        combattant.protect(armures.getProtectPoints());
+    }
     @Override
     public void take(Item item) {
         if (item instanceof HealingSpell) {
@@ -35,6 +39,7 @@ public class Healer extends SpellCaster{
     private HealingSpell healingSpell;
     private Food food;
 private LifePotion lifePotion;
+private Armures armures;
 
 
 }

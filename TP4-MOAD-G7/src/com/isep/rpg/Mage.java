@@ -6,8 +6,13 @@ public class Mage extends SpellCaster {
         super(n,h,mana);
         this.mana=mana;
     }
+    public void Protect(Combattant combattant){ combattant.protect(armures.getProtectPoints());
+    }
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
     }
+
+
+
     @Override
     public void fight(Combattant combattant) { if (mana!=0) { combattant.loose(tricks.getDamagePoints()); mana=mana-1;
     } else {
@@ -42,4 +47,5 @@ public class Mage extends SpellCaster {
     private Tricks tricks;
     private Food food;
     private LifePotion lifePotion;
+    private Armures armures;
 }
