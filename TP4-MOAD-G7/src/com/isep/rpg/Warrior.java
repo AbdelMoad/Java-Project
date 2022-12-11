@@ -17,7 +17,7 @@ public class Warrior extends Hero {
 
 
     @Override
-    public void Protect(Combattant combattant){ combattant.protect(armures.getProtectPoints());
+    public void Protect(Combattant combattant){ combattant.heal(armures.getProtectPoints());
     }
 
     // Implémentation de la méthode abstraite "take" par le guerrier :

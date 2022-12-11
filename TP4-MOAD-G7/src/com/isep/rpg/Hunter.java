@@ -9,7 +9,7 @@ public class Hunter extends Hero {
     }
 
     @Override
-    public void Protect(Combattant combattant){ combattant.protect(armures.getProtectPoints());
+    public void Protect(Combattant combattant){ combattant.heal(armures.getProtectPoints());
     }
 
     private int arrow;

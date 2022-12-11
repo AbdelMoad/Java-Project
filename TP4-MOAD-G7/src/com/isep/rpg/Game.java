@@ -35,7 +35,7 @@ public class Game {
                 Hero ronal2 = new Warrior("Warrior"+i,10);
                 ronal2.take( new Weapon("knife", 5) );
                 ronal2.take( new Food("Apple", 1) );
-                ronal2.take(new LifePotion("Potion de vie"));
+                ronal2.take(new Armures("Warrior Armures",3));
                 heros.add(ronal2);
 
         }
@@ -43,7 +43,7 @@ public class Game {
             Hero joe = new Hunter("Hunter",8,20);
             joe.take(new Bow("Arc",6));
             joe.take( new Food("Apple", 1) );
-            joe.take(new LifePotion("Potion de vie"));
+            joe.take(new Armures("Warrior Armures",3));
             heros.add(joe);
             System.out.println("Combien ?");
             int n = sc.nextInt();
@@ -51,7 +51,7 @@ public class Game {
                 Hero joe2 = new Hunter("Hunter"+i,8,20);
                 joe2.take(new Bow("Arc",6));
                 joe2.take( new Food("Apple", 1) );
-                joe2.take(new LifePotion("Potion de vie"));
+                joe2.take(new Armures("Warrior Armures",3));
                 heros.add(joe2);
 
             }
@@ -60,7 +60,7 @@ public class Game {
             Hero diana = new Healer("Healer",15,5);
             diana.take(new HealingSpell("Sort de guérison",5));
             diana.take( new Food("Apple", 1) );
-            diana.take(new ManaPotion("Potion de vie",5));
+            diana.take(new Armures("Warrior Armures",3));
             heros.add(diana);
             System.out.println("Combien ?");
             int n = sc.nextInt();
@@ -68,14 +68,14 @@ public class Game {
                 Hero diana2 = new Healer("Healer"+i,15,5);
                 diana2.take(new HealingSpell("Sort de guérison",5));
                 diana2.take( new Food("Apple", 1) );
-                diana2.take(new LifePotion("Potion de vie"));
+                diana2.take(new Armures("Warrior Armures",3));
                 heros.add(diana2);
             }}
             if (choix==4){
                 Hero merlin = new Mage("Mage",5,20);
                 merlin.take(new Tricks("Sort d'Attaque",10));
                 merlin.take( new Food("Apple", 1) );
-
+                merlin.take(new Armures("Warrior Armures",3));
                 heros.add(merlin);
                 System.out.println("Combien ?");
                 int n = sc.nextInt();
@@ -83,7 +83,7 @@ public class Game {
                     Hero merlin2 = new Mage("Mage"+i,5,20);
                     merlin2.take(new Tricks("Sort d'Attaque",6));
                     merlin2.take( new Food("Apple", 1) );
-
+                    merlin2.take(new Armures("Warrior Armures",3));
                     heros.add(merlin);
                 }
             }
@@ -150,7 +150,7 @@ public class Game {
                     }else {
                         goodOne.fight(badOne);}
                 }else if (choix == 2){goodOne.setFood(goodOne);
-                } else if (choix==3) {goodOne.Protect(badOne);
+                } else if (choix==3) {goodOne.Protect(goodOne);
 
                 }
 

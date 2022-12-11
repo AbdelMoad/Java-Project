@@ -6,7 +6,7 @@ public class Mage extends SpellCaster {
         super(n,h,mana);
         this.mana=mana;
     }
-    public void Protect(Combattant combattant){ combattant.protect(armures.getProtectPoints());
+    public void Protect(Combattant combattant){ combattant.heal(armures.getProtectPoints());
     }
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
     }
