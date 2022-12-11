@@ -75,7 +75,7 @@ public class Game {
                 Hero merlin = new Mage("Mage",5,20);
                 merlin.take(new Tricks("Sort d'Attaque",10));
                 merlin.take( new Food("Apple", 1) );
-                merlin.take(new ManaPotion("Potion de vie",5));
+
                 heros.add(merlin);
                 System.out.println("Combien ?");
                 int n = sc.nextInt();
@@ -83,7 +83,7 @@ public class Game {
                     Hero merlin2 = new Mage("Mage"+i,5,20);
                     merlin2.take(new Tricks("Sort d'Attaque",6));
                     merlin2.take( new Food("Apple", 1) );
-                    merlin2.take(new ManaPotion("Potion de vie",5));
+
                     heros.add(merlin);
                 }
             }

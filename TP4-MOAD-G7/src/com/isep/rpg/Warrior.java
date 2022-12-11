@@ -40,7 +40,7 @@ public class Warrior extends Hero {
 
     private Weapon weapon;
     private Food food;
-    private LifePotion lifePotion;
+
     private Armures armures;
 
 }
