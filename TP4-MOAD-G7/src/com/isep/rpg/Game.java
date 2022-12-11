@@ -23,7 +23,7 @@ public class Game {
             Scanner sc = new Scanner(System.in);
             choix = sc.nextInt();
         if (choix == 1){
-            Hero ronal = new Warrior("Warrior",10);
+            Hero ronal = new Warrior("Warrior",10,0);
             ronal.take( new Weapon("knife", 5) );
             ronal.take( new Food("Apple", 1) );
             ronal.take(new Armures("Warrior Armures",3));
@@ -32,7 +32,7 @@ public class Game {
             System.out.println("Combien ?");
             int n = sc.nextInt();
             for (int i = 2;i <=n;i++){
-                Hero ronal2 = new Warrior("Warrior"+i,10);
+                Hero ronal2 = new Warrior("Warrior"+i,10,0);
                 ronal2.take( new Weapon("knife", 5) );
                 ronal2.take( new Food("Apple", 1) );
                 ronal2.take(new Armures("Warrior Armures",3));

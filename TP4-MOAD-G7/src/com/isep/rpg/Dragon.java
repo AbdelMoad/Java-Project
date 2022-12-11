@@ -10,7 +10,10 @@ public class Dragon extends Enemy{
     public void fight(Combattant combattant) {
         combattant.loose( getDamagePoints());
     }
-    public void Protect(Combattant combattant){ 
+
+
+
+    public void Protect(Combattant combattant){
     }
 
     @Override
@@ -21,5 +24,7 @@ public class Dragon extends Enemy{
     public int getDamagePoints() {
         return damagePoints;
     }
+
+    private Hero hero;
 
 }

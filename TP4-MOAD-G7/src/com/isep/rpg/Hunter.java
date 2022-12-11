@@ -2,7 +2,7 @@ package com.isep.rpg;
 
 public class Hunter extends Hero {
     public Hunter(String n,int h,int arrow) {
-        super(n,h);
+        super(n,h,0);
        this.arrow=arrow;
     }
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
