@@ -156,9 +156,7 @@ public class Game {
                     }else {
                         goodOne.fight(badOne);}
                 }else if (choix == 2){goodOne.setFood(goodOne);
-                } else if (choix==3) {goodOne.Protect(goodOne);
-
-                }
+                } else if (choix==3) {goodOne.Protect(goodOne);}
 
                 if (badOne.getHealthPoint() <= 0) {
                     displayMessage("Bravo, " + goodOne.getName()
