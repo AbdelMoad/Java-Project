@@ -43,6 +43,7 @@ public class Game {
             Hero joe = new Hunter("Hunter",8,2,20);
             joe.take(new Bow("Arc",6));
             joe.take( new Food("Apple", 1) );
+            joe.take(new LifePotion("Potion de vie",5));
             joe.take(new Bouclier("Warrior Armures",3));
             heros.add(joe);
             System.out.println("Combien ?");
@@ -52,6 +53,7 @@ public class Game {
                 joe2.take(new Bow("Arc",6));
                 joe2.take( new Food("Apple", 1) );
                 joe2.take(new Bouclier("Warrior Armures",3));
+                joe2.take(new Bouclier("Warrior Armures",3));
                 heros.add(joe2);
 
             }
@@ -60,6 +62,7 @@ public class Game {
             Hero diana = new Healer("Healer",15,5,5);
             diana.take(new HealingSpell("Sort de guérison",5));
             diana.take( new Food("Apple", 1) );
+            diana.take(new LifePotion("Potion de vie",5));
             diana.take(new Bouclier("Warrior Armures",3));
             heros.add(diana);
             System.out.println("Combien ?");
@@ -68,6 +71,7 @@ public class Game {
                 Hero diana2 = new Healer("Healer"+i,15,5,5);
                 diana2.take(new HealingSpell("Sort de guérison",5));
                 diana2.take( new Food("Apple", 1) );
+                diana2.take(new LifePotion("Potion de vie",5));
                 diana2.take(new Bouclier("Warrior Armures",3));
                 heros.add(diana2);
             }}
@@ -75,6 +79,7 @@ public class Game {
                 Hero merlin = new Mage("Mage",5,20,20);
                 merlin.take(new Tricks("Sort d'Attaque",10));
                 merlin.take( new Food("Apple", 1) );
+                merlin.take(new LifePotion("Potion de vie",5));
                 merlin.take(new Bouclier("Warrior Armures",3));
                 heros.add(merlin);
                 System.out.println("Combien ?");
@@ -83,6 +88,7 @@ public class Game {
                     Hero merlin2 = new Mage("Mage"+i,5,20,20);
                     merlin2.take(new Tricks("Sort d'Attaque",6));
                     merlin2.take( new Food("Apple", 1) );
+                    merlin.take(new LifePotion("Potion de vie",5));
                     merlin2.take(new Bouclier("Warrior Armures",3));
                     heros.add(merlin);
                 }
