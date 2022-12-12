@@ -187,7 +187,7 @@ public class Game {
                 System.out.println("Quel est ton choix ?");
                 int choix = sc.nextInt();
                 if (choix == 1){ for(Combattant elem:heros){
-
+                    
                 }
                 }else if (choix == 2){
                 }else if (choix == 3){
