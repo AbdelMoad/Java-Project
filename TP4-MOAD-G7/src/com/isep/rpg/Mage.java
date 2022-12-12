@@ -2,8 +2,8 @@ package com.isep.rpg;
 
 public class Mage extends SpellCaster {
 
-    public Mage(String n,int h, int mana) {
-        super(n,h,mana);
+    public Mage(String n,int h, int pp, int mana) {
+        super(n,h,pp,mana);
         this.mana=mana;
     }
     public void Protect(Combattant combattant){ combattant.heal(armures.getProtectPoints());

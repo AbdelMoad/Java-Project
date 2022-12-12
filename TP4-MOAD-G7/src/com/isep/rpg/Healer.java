@@ -1,8 +1,8 @@
 package com.isep.rpg;
 
 public class Healer extends SpellCaster{
-    public Healer(String n, int h,int mana) {
-        super(n, h,mana);
+    public Healer(String n, int h, int pp,int mana) {
+        super(n, h,pp,mana);
         this.mana=mana;
     }
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());

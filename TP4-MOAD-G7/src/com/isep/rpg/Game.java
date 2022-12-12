@@ -40,7 +40,7 @@ public class Game {
 
         }
         }if (choix == 2){
-            Hero joe = new Hunter("Hunter",8,20);
+            Hero joe = new Hunter("Hunter",8,2,20);
             joe.take(new Bow("Arc",6));
             joe.take( new Food("Apple", 1) );
             joe.take(new Armures("Warrior Armures",3));
@@ -48,7 +48,7 @@ public class Game {
             System.out.println("Combien ?");
             int n = sc.nextInt();
             for (int i = 2;i <=n;i++){
-                Hero joe2 = new Hunter("Hunter"+i,8,20);
+                Hero joe2 = new Hunter("Hunter"+i,8,2,20);
                 joe2.take(new Bow("Arc",6));
                 joe2.take( new Food("Apple", 1) );
                 joe2.take(new Armures("Warrior Armures",3));
@@ -57,7 +57,7 @@ public class Game {
             }
 
         }if (choix == 3){
-            Hero diana = new Healer("Healer",15,5);
+            Hero diana = new Healer("Healer",15,5,5);
             diana.take(new HealingSpell("Sort de guérison",5));
             diana.take( new Food("Apple", 1) );
             diana.take(new Armures("Warrior Armures",3));
@@ -65,14 +65,14 @@ public class Game {
             System.out.println("Combien ?");
             int n = sc.nextInt();
             for (int i = 2;i <=n;i++){
-                Hero diana2 = new Healer("Healer"+i,15,5);
+                Hero diana2 = new Healer("Healer"+i,15,5,5);
                 diana2.take(new HealingSpell("Sort de guérison",5));
                 diana2.take( new Food("Apple", 1) );
                 diana2.take(new Armures("Warrior Armures",3));
                 heros.add(diana2);
             }}
             if (choix==4){
-                Hero merlin = new Mage("Mage",5,20);
+                Hero merlin = new Mage("Mage",5,20,20);
                 merlin.take(new Tricks("Sort d'Attaque",10));
                 merlin.take( new Food("Apple", 1) );
                 merlin.take(new Armures("Warrior Armures",3));
@@ -80,7 +80,7 @@ public class Game {
                 System.out.println("Combien ?");
                 int n = sc.nextInt();
                 for (int i = 2;i <=n;i++){
-                    Hero merlin2 = new Mage("Mage"+i,5,20);
+                    Hero merlin2 = new Mage("Mage"+i,5,20,20);
                     merlin2.take(new Tricks("Sort d'Attaque",6));
                     merlin2.take( new Food("Apple", 1) );
                     merlin2.take(new Armures("Warrior Armures",3));

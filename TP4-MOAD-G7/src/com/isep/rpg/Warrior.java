@@ -2,8 +2,8 @@ package com.isep.rpg;
 
 public class Warrior extends Hero {
 
-    public Warrior(String n,int h,int protectPoints) {
-        super(n, h,0);
+    public Warrior(String n,int h,int pp) {
+        super(n, h,pp);
         this.protectPoints=protectPoints;
     }
 
