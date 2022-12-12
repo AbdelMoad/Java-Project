@@ -13,7 +13,7 @@ public class Game {
         // Il faut normalement 5 héros de types différents...
         heros = new ArrayList<>();
 
-        while (choix!=5){
+        while (true){
         System.out.println("Quel est ton choix ?");
         System.out.println(" 1- Guerrier");
         System.out.println(" 2- Chasseur");
@@ -184,6 +184,7 @@ public class Game {
             if (enemies.size() == 0) {
                 displayMessage("BRAVO, les héros ont gagné, le monde est sauvé !!!");
                 Scanner sc = new Scanner(System.in);
+
                 System.out.println("Quel est ton choix ?");
                 int choix = sc.nextInt();
                 if (choix == 1){
@@ -196,6 +197,10 @@ public class Game {
                     }
                 }else if (choix == 3){
 
+                }
+                System.out.println("#########################");
+                for (Combattant c: heros) {
+                    System.out.print(c.getName() + "(" + c.getHealthPoint() + ") ");
                 }
                 break;
 
