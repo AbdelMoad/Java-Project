@@ -1,5 +1,6 @@
 package com.isep.rpg;
 
+import com.isep.utils.ConsoleParser;
 import com.isep.utils.InputParser;
 
 import java.util.ArrayList;
@@ -7,9 +8,9 @@ import java.util.Scanner;
 
 public class Game {
     public Game(InputParser inputParser) {
-        int choix=0;
+        inputParser = new ConsoleParser();
         this.inputParser = inputParser;
-
+        int choix=0;
         // Il faut normalement 5 héros de types différents...
         heros = new ArrayList<>();
 
@@ -114,7 +115,9 @@ public class Game {
         
         }}
 
-
+    public void handleInput(String input) {
+        inputParser.parseInput(input, this);
+    }
 
 
 

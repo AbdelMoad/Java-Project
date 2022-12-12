@@ -1,4 +1,9 @@
 package com.isep.utils;
 
-public class InputParser {
+import com.isep.rpg.Game;
+
+public interface InputParser {
+
+
+    public void parseInput(String input, Game game);
 }

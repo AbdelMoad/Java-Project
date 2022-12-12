@@ -1,4 +1,12 @@
 package com.isep.utils;
 
-public class GUIParser extends InputParser {
+import com.isep.rpg.Game;
+
+public class GUIParser implements InputParser {
+
+
+    @Override
+    public void parseInput(String input, Game game) {
+
+    }
 }
