@@ -26,7 +26,7 @@ public abstract class Combattant {
     
     public void loose(int hp) {
         // healthPoint = healthPoint - hp
-        healthPoint -= hp;
+        healthPoint -= hp-protectPoints;
 
     }
     public void loose2(int hp, int pp){

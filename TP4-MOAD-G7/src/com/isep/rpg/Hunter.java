@@ -10,13 +10,13 @@ public class Hunter extends Hero {
     }
 
     @Override
-    public void Protect(Combattant combattant){ combattant.heal(armures.getProtectPoints());
+    public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
     }
 
     private int arrow;
 
 
-    public void Protect(Hero hero){ hero.protect(armures.getProtectPoints());
+    public void Protect(Hero hero){ hero.protect(bouclier.getProtectPoints());
     }
 
     @Override
@@ -36,8 +36,9 @@ public class Hunter extends Hero {
         else if (item instanceof Potion) {
             lifePotion = (LifePotion) item;
         }
-        else if (item instanceof Armures) {
-            armures = (Armures) item;
+        else if (item instanceof Bouclier) {
+            bouclier = (Bouclier) item;
+
         }
         else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
@@ -47,5 +48,5 @@ public class Hunter extends Hero {
     private Bow bow;
     private LifePotion lifePotion;
     private Food food;
-    private Armures armures;
+    private Bouclier bouclier;
 }

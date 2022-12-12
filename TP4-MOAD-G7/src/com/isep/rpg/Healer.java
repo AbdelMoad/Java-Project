@@ -9,7 +9,7 @@ public class Healer extends SpellCaster{
     }
     public void Protect(Combattant combattant){
 
-        combattant.heal(armures.getProtectPoints());
+        combattant.heal(bouclier.getProtectPoints());
     }
     @Override
     public void take(Item item) {
@@ -39,7 +39,7 @@ public class Healer extends SpellCaster{
     private HealingSpell healingSpell;
     private Food food;
 private LifePotion lifePotion;
-private Armures armures;
+private Bouclier bouclier;
 
 
 }

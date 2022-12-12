@@ -1,8 +1,8 @@
 package com.isep.rpg;
 
-public class Armures extends Item {
+public class Bouclier extends Item {
 
-    public Armures(String name, int protectPoints) {
+    public Bouclier(String name, int protectPoints) {
         super(name, protectPoints);
         this.protectPoints = protectPoints;
     }

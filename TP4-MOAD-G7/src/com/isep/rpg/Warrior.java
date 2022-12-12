@@ -18,7 +18,7 @@ public class Warrior extends Hero {
 
 
     @Override
-    public void Protect(Combattant combattant){ combattant.heal(armures.getProtectPoints());
+    public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
     }
 
     // Implémentation de la méthode abstraite "take" par le guerrier :
@@ -30,8 +30,8 @@ public class Warrior extends Hero {
         } else if (item instanceof Food) {
             food = (Food) item;
         }
-        else if (item instanceof Armures) {
-            armures = (Armures) item;
+        else if (item instanceof Bouclier) {
+            bouclier = (Bouclier) item;
 
         } else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
@@ -42,6 +42,6 @@ public class Warrior extends Hero {
     private Weapon weapon;
     private Food food;
 
-    private Armures armures;
 
+    private Bouclier bouclier;
 }
