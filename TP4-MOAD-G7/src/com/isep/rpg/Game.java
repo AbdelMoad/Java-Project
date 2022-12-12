@@ -27,7 +27,7 @@ public class Game {
             ronal.take( new Weapon("knife", 5) );
             ronal.take( new Food("Apple", 1) );
             ronal.take(new Bouclier("Warrior Armures",3));
-
+            ronal.take(new LifePotion("Warrior Armures",5));
             heros.add(ronal);
             System.out.println("Combien ?");
             int n = sc.nextInt();
@@ -36,6 +36,7 @@ public class Game {
                 ronal2.take( new Weapon("knife", 5) );
                 ronal2.take( new Food("Apple", 1) );
                 ronal2.take(new Bouclier("Warrior Armures",3));
+                ronal2.take(new LifePotion("Warrior Armures",5));
                 heros.add(ronal2);
 
         }
@@ -53,7 +54,7 @@ public class Game {
                 joe2.take(new Bow("Arc",6));
                 joe2.take( new Food("Apple", 1) );
                 joe2.take(new Bouclier("Warrior Armures",3));
-                joe2.take(new Bouclier("Warrior Armures",3));
+                joe2.take(new LifePotion("Warrior Armures",5));
                 heros.add(joe2);
 
             }
@@ -88,7 +89,7 @@ public class Game {
                     Hero merlin2 = new Mage("Mage"+i,5,20,20);
                     merlin2.take(new Tricks("Sort d'Attaque",6));
                     merlin2.take( new Food("Apple", 1) );
-                    merlin.take(new LifePotion("Potion de vie",5));
+                    merlin2.take(new LifePotion("Potion de vie",5));
                     merlin2.take(new Bouclier("Warrior Armures",3));
                     heros.add(merlin);
                 }
@@ -146,6 +147,7 @@ public class Game {
                 System.out.println(" 1- Attaque/Guérir");
                 System.out.println(" 2- Nourriture");
                 System.out.println(" 3- Se défendre");
+                System.out.println(" 4- Potion de vie");
                 int choix = sc.nextInt();
                 if (choix == 1){ // Riposte du gentil, s'il n'est pas vaincu
                     displayMessage("Le gentil " + goodOne.getName()
@@ -156,7 +158,10 @@ public class Game {
                     }else {
                         goodOne.fight(badOne);}
                 }else if (choix == 2){goodOne.setFood(goodOne);
-                } else if (choix==3) {goodOne.Protect(goodOne);}
+                }else if (choix == 3) {goodOne.Protect(goodOne);
+                } else if (choix==4) {goodOne.setLifePotion(goodOne);
+
+                }
 
                 if (badOne.getHealthPoint() <= 0) {
                     displayMessage("Bravo, " + goodOne.getName()
@@ -181,7 +186,9 @@ public class Game {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Quel est ton choix ?");
                 int choix = sc.nextInt();
-                if (choix == 1){
+                if (choix == 1){ for(Combattant elem:heros){
+
+                }
                 }else if (choix == 2){
                 }else if (choix == 3){
                 }

@@ -21,6 +21,8 @@ public abstract class Combattant {
     public abstract void setFood(Combattant combattant);
     public abstract void Protect(Combattant combattant);
 
+    public abstract void setLifePotion(Combattant combattant);
+
 
 
     

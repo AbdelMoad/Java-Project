@@ -17,6 +17,7 @@ public class SuperDragon extends Enemy{
     }
     public void Protect(Combattant combattant){
     }
+    public void setLifePotion(Combattant combattant){}
     public int getDamagePoints() {
         return damagePoints;
     }

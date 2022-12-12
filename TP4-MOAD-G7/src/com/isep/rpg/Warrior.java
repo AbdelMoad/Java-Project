@@ -15,7 +15,7 @@ public class Warrior extends Hero {
 
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
     }
-
+    public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
     @Override
     public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
@@ -33,7 +33,11 @@ public class Warrior extends Hero {
         else if (item instanceof Bouclier) {
             bouclier = (Bouclier) item;
 
-        } else {
+        }
+        else if (item instanceof LifePotion) {
+            lifePotion = (LifePotion) item;
+
+        }else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
     }
@@ -41,7 +45,7 @@ public class Warrior extends Hero {
 
     private Weapon weapon;
     private Food food;
-
+    private LifePotion lifePotion;
 
     private Bouclier bouclier;
 }

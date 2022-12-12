@@ -31,9 +31,14 @@ public class Mage extends SpellCaster {
        else if (item instanceof Food) {
             food = (Food) item;
         }
-        else if (item instanceof Potion) {
+        else if (item instanceof LifePotion) {
             lifePotion = (LifePotion) item;
-        } else {
+        }
+
+        else if (item instanceof Bouclier) {
+            bouclier = (Bouclier) item;
+
+        }else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
     }
@@ -42,6 +47,7 @@ public class Mage extends SpellCaster {
     public void heal(Combattant combattant) {
 
     }
+    public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
 
     private Tricks tricks;

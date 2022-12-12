@@ -12,7 +12,7 @@ public abstract class Hero extends Combattant{
 public abstract void take(Item item);
     public abstract void setFood(Combattant combattant);
     public abstract   void Protect(Combattant combattant);
-
+    public abstract void setLifePotion(Combattant combattant);
     public int getProtectPoints() { return protectPoints;
     }
 }

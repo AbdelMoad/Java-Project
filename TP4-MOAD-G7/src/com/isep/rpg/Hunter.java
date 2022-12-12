@@ -12,7 +12,7 @@ public class Hunter extends Hero {
     @Override
     public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
     }
-
+    public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
     private int arrow;
 
 
@@ -21,7 +21,8 @@ public class Hunter extends Hero {
 
     @Override
     public void fight(Combattant combattant) { if (arrow!=0) { combattant.loose(bow.getDamagePoints()); arrow=arrow-1;
-        } else {Game.displayMessage("Oups ! Il y a plus de fleches");} ;
+        } else {Game.displayMessage("Oups ! Il y a plus de fleches");}
+
 
     }
     // Implémentation de la méthode abstraite "take" par le guerrier :
@@ -33,7 +34,7 @@ public class Hunter extends Hero {
         } else if (item instanceof Food) {
             food = (Food) item;
         }
-        else if (item instanceof Potion) {
+        else if (item instanceof LifePotion) {
             lifePotion = (LifePotion) item;
         }
         else if (item instanceof Bouclier) {

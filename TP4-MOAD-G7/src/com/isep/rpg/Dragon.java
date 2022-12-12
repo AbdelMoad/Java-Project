@@ -11,7 +11,7 @@ public class Dragon extends Enemy{
         combattant.loose(getDamagePoints());
     }
 
-
+    public void setLifePotion(Combattant combattant){}
 
     public void Protect(Combattant combattant){
     }

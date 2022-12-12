@@ -20,17 +20,23 @@ public class Healer extends SpellCaster{
         }
         else if (item instanceof LifePotion) {
             lifePotion = (LifePotion) item;
-        } else {
+        }
+
+        else if (item instanceof Bouclier) {
+            bouclier = (Bouclier) item;
+
+        }else {
             Game.displayMessage("Oups ! " + item.getName() + " est inutile...");
         }
     }
-
+    public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
     @Override
     public void fight(Combattant combattant) { if (mana!=0) { combattant.heal(healingSpell.getHealthPoint()); mana=mana-1;
     } else {
         Game.displayMessage("Oups ! Il y a plus de mana");
 
     }
+
 
     }
     private void setMana(Combattant combattant){
