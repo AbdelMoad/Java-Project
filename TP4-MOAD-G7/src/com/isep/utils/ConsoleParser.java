@@ -10,7 +10,7 @@ public class ConsoleParser extends InputParser{
 
             switch (tokens[0]) {
                 case "rpj":
-                    // handle the "rpj" command
+
                     break;
                 default:
                     // handle invalid or unknown command

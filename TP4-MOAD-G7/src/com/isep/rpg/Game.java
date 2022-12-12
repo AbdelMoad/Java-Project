@@ -186,15 +186,18 @@ public class Game {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Quel est ton choix ?");
                 int choix = sc.nextInt();
-                if (choix == 1){ for(Combattant elem:heros){
-                    
-                }
+                if (choix == 1){
+                    for(Combattant elem:heros){
+                        elem.damagePoints++;
+                     }
                 }else if (choix == 2){
+                    for(Combattant elem:heros){
+                        elem.protectPoints++;
+                    }
                 }else if (choix == 3){
+
                 }
                 break;
-
-
 
             }
 
