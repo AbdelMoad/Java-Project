@@ -13,6 +13,12 @@ public class Hunter extends Hero {
     public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
     }
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
+
+    @Override
+    public void chooseReward() {
+
+    }
+
     private int arrow;
 
 

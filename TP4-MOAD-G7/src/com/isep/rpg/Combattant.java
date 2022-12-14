@@ -55,6 +55,6 @@ public abstract class Combattant {
     private String name;
     protected int healthPoint;
     protected int manaPoint;
-
+    public abstract void chooseReward();
 }
 

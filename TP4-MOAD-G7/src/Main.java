@@ -7,5 +7,6 @@ public class Main {
         // Il faudra initialiser un "InputParser"...
         Game game = new Game(null);
         game.start();
+
     }
 }

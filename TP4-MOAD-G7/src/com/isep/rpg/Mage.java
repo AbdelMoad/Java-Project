@@ -49,6 +49,11 @@ public class Mage extends SpellCaster {
     }
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
+    @Override
+    public void chooseReward() {
+
+    }
+
 
     private Tricks tricks;
     private Food food;

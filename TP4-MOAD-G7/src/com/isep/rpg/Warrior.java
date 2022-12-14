@@ -18,6 +18,11 @@ public class Warrior extends Hero {
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
     @Override
+    public void chooseReward() {
+
+    }
+
+    @Override
     public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
     }
 

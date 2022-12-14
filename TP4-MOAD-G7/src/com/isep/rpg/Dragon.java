@@ -13,6 +13,11 @@ public class Dragon extends Enemy{
 
     public void setLifePotion(Combattant combattant){}
 
+    @Override
+    public void chooseReward() {
+
+    }
+
     public void Protect(Combattant combattant){
     }
 

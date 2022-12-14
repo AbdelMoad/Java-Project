@@ -30,6 +30,12 @@ public class Healer extends SpellCaster{
         }
     }
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
+
+    @Override
+    public void chooseReward() {
+
+    }
+
     @Override
     public void fight(Combattant combattant) { if (mana!=0) { combattant.heal(healingSpell.getHealthPoint()); mana=mana-1;
     } else {
