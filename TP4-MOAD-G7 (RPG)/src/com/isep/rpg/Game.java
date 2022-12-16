@@ -22,10 +22,14 @@ public class Game {
         inputParser = new ConsoleParser();
         this.inputParser = inputParser;
         System.out.println("Bienvenue sur Mini RPG Lite 300");
+        pressAnyKeyToContinue();
         System.out.println("Le monde est envahi par les dragons, il faut le sauver !");
+        pressAnyKeyToContinue();
         System.out.println("Pour cela vous aurez besoin d'appeler des héros. Mais 4 Types de héros s'offrent à vous :");
         System.out.println("les guérriers, les guérisseuses, les mages et les chasseurs.");
+        pressAnyKeyToContinue();
         System.out.println("Vous pourrez utiliser autant d'héros que vous voulez ! A vous de jouer !");
+        pressAnyKeyToContinue();
         int choix = 0;
         // Il faut normalement 5 héros de types différents...
         heros = new ArrayList<>();
@@ -136,8 +140,26 @@ public class Game {
         }
     }
 
-    public void handleInput(String input) {
-        inputParser.parseInput(input, this);
+
+    private void pressAnyKeyToContinue()
+    {
+        System.out.println("Tapez Entrée pour continuer...");
+        try
+        {
+            System.in.read();
+        }
+        catch(Exception e)
+        {}
+    }
+    private void pressAnyKeyToFinish()
+    {
+        System.out.println("Tapez Entrée pour terminer la partie...");
+        try
+        {
+            System.in.read();
+        }
+        catch(Exception e)
+        {}
     }
 
 
@@ -220,7 +242,7 @@ public class Game {
                 if (heros.size() == 0) {
 
                     displayMessage("Les héros ont perdu, c'est la fin du monde...");
-
+                    pressAnyKeyToFinish();
                     break;
 
 
@@ -235,6 +257,7 @@ public class Game {
                         elem.chooseReward();
 
                     }
+                    pressAnyKeyToFinish();
 
                     break;
                 }
