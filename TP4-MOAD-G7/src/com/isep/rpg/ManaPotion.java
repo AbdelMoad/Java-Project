@@ -13,4 +13,7 @@ public class ManaPotion extends Potion {
 
     // Une potion qui donne des points de vie
     private int mana;
+    public void setMana(){
+        this.mana = mana +20;
+    }
 }

@@ -1,5 +1,7 @@
 package com.isep.rpg;
 
+import java.util.Scanner;
+
 public class Healer extends SpellCaster{
     public Healer(String n, int h, int pp,int mana) {
         super(n, h,pp,mana);
@@ -33,9 +35,22 @@ public class Healer extends SpellCaster{
 
     @Override
     public void chooseReward() {
-
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            String reward = scanner.nextLine();
+            switch (reward) {
+                case "1":
+                    this.healingSpell.increaseHealthPoints();
+                case "2":
+                    take(new Food("Repas",3));
+                case "3":
+                    setMana();
+            }
+        }
     }
-
+    public void setMana(){
+        this.mana = mana +20;
+    }
     @Override
     public void fight(Combattant combattant) { if (mana!=0) { combattant.heal(healingSpell.getHealthPoint()); mana=mana-1;
     } else {
@@ -45,13 +60,14 @@ public class Healer extends SpellCaster{
 
 
     }
-    private void setMana(Combattant combattant){
-        
-    }
-    private HealingSpell healingSpell;
+
+
     private Food food;
 private LifePotion lifePotion;
+private ManaPotion manaPotion;
+private HealingSpell healingSpell;
 private Bouclier bouclier;
+
 
 
 }

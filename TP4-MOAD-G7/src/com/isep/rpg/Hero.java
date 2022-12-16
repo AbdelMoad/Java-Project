@@ -4,6 +4,7 @@ public abstract class Hero extends Combattant{
 
     protected int protectPoints;
 
+
     public Hero(String n, int h,int protectPoints) {
         super(n, h,protectPoints);
 

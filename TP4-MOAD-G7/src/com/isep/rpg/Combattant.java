@@ -17,6 +17,14 @@ public abstract class Combattant {
         return this.healthPoint;
     }
 
+    public int getProtectPoints() {
+        return protectPoints;
+    }
+
+    public int getManaPoint() {
+        return manaPoint;
+    }
+
     public abstract void fight(Combattant combattant);
     public abstract void setFood(Combattant combattant);
     public abstract void Protect(Combattant combattant);
@@ -31,9 +39,7 @@ public abstract class Combattant {
         healthPoint -= hp-protectPoints;
 
     }
-    public void loose2(int hp, int pp){
-        healthPoint= healthPoint -hp +pp;
-    }
+
     public void protect(int hp) {
         // healthPoint = healthPoint - hp
         damagePoints -= damagePoints;
@@ -48,8 +54,8 @@ public abstract class Combattant {
         healthPoint += hp;
 
     }
-    public void M(int mana){
-        manaPoint +=mana;
+    public void ManaSet(int mana){
+        mana += mana;
     }
 
     private String name;

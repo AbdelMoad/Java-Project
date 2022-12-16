@@ -10,6 +10,9 @@ public class Weapon extends Item {
     public int getDamagePoints() {
         return damagePoints;
     }
+    public void increaseDamagePoints(){
+        this.damagePoints= damagePoints +2;
+    }
 
     // Une arme inflige des points de dégats
     private int damagePoints;

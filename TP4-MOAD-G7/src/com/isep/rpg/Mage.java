@@ -1,5 +1,7 @@
 package com.isep.rpg;
 
+import java.util.Scanner;
+
 public class Mage extends SpellCaster {
 
     public Mage(String n,int h, int pp, int mana) {
@@ -11,8 +13,23 @@ public class Mage extends SpellCaster {
     public void setFood(Combattant combattant) { combattant.eat(food.getHealthPoint());
     }
 
-
-
+    public void chooseReward() {
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            String reward = scanner.nextLine();
+            switch (reward) {
+                case "1":
+                    this.tricks.increaseDamagePoints();
+                case "2":
+                    take(new Food("Repas",3));
+                case "3":
+                    setMana();
+            }
+        }
+    }
+    public void setMana(){
+        this.mana = mana +20;
+    }
     @Override
     public void fight(Combattant combattant) { if (mana!=0) { combattant.loose(tricks.getDamagePoints()); mana=mana-1;
     } else {
@@ -44,18 +61,13 @@ public class Mage extends SpellCaster {
     }
 
 
-    public void heal(Combattant combattant) {
 
-    }
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
-    @Override
-    public void chooseReward() {
-
-    }
 
 
     private Tricks tricks;
+
     private Food food;
     private LifePotion lifePotion;
     private Bouclier bouclier;

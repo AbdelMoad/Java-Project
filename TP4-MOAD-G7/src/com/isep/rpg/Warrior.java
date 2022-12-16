@@ -1,10 +1,11 @@
 package com.isep.rpg;
 
+import java.util.Scanner;
+
 public class Warrior extends Hero {
 
-    public Warrior(String n,int h,int pp) {
-        super(n, h,pp);
-        this.protectPoints=protectPoints;
+    public Warrior(String n,int h,int protectedPoint) {
+        super(n, h,protectedPoint);
     }
 
 
@@ -17,11 +18,23 @@ public class Warrior extends Hero {
     }
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
-    @Override
     public void chooseReward() {
-
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            String reward = scanner.nextLine();
+            switch (reward) {
+                case "1":
+                    weapon.increaseDamagePoints();
+                case "2":
+                    take(new Food("Repas",3));
+                case "3":
+                    setProtectPoints();
+            }
+        }
     }
-
+    public void setProtectPoints(){
+        this.protectPoints = protectPoints +2;
+    }
     @Override
     public void Protect(Combattant combattant){ combattant.heal(bouclier.getProtectPoints());
     }
@@ -47,8 +60,8 @@ public class Warrior extends Hero {
         }
     }
 
-
     private Weapon weapon;
+
     private Food food;
     private LifePotion lifePotion;
 

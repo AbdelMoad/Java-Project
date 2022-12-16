@@ -10,6 +10,9 @@ public class Bow extends Item {
     public int getDamagePoints() {
         return damagePoints;
     }
+    public void increaseDamagePoints(){
+        this.damagePoints= damagePoints +2;
+    }
 
     // Un arc inflige des points de dégats
     private int damagePoints;

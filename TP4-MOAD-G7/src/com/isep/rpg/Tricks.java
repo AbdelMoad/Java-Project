@@ -11,6 +11,10 @@ public class Tricks extends Potion {
         return damagePoints;
     }
 
+    public void increaseDamagePoints(){
+        this.damagePoints= damagePoints +2;
+    }
+
     // Une potion d'attaque inflige des points de dégats
     protected int damagePoints;
 }

@@ -109,23 +109,24 @@ public class Game {
                 }
             }
             // Il faut normalement 5 ennemis de types différents...
-            enemies = new ArrayList<>();
-            for (Combattant elem : heros) {
-                if (elem instanceof Warrior) {
-                    enemies.add(new Dragon("Dracofeu", 8, 6));
-                }
-                if (elem instanceof Hunter) {
-                    enemies.add(new Dragon("Smaug", 7, 7));
-                }
-                if (elem instanceof Mage) {
-                    enemies.add(new Dragon("Tornado", 15, 3));
-                }
-                if (elem instanceof Healer) {
-                    enemies.add(new Dragon("Morticus", 15, 5));
-                }
+
+
+
+        }
+        enemies = new ArrayList<>();
+        for (Combattant elem : heros) {
+            if (elem instanceof Warrior) {
+                enemies.add(new Dragon("Dracofeu", 8, 6));
             }
-
-
+            if (elem instanceof Hunter) {
+                enemies.add(new Dragon("Smaug", 7, 7));
+            }
+            if (elem instanceof Mage) {
+                enemies.add(new Dragon("Tornado", 15, 3));
+            }
+            if (elem instanceof Healer) {
+                enemies.add(new Dragon("Morticus", 15, 5));
+            }
         }
     }
 
@@ -144,95 +145,95 @@ public class Game {
         // Boucle de jeu
 
 
-        while (true) {
+            while (true) {
 
 
-            ixHero = random.nextInt(heros.size());
-            ixEnemy = random.nextInt(enemies.size());
+
+                ixHero = 0;
+                ixEnemy = 0;
 
 
-            displayStatus(heros, enemies);
+                displayStatus(heros, enemies);
 
-            Combattant goodOne = heros.get(ixHero);
-            Combattant badOne = enemies.get(ixEnemy);
+                Combattant goodOne = heros.get(ixHero);
+                Combattant badOne = enemies.get(ixEnemy);
 
 
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Quel est ton choix ?");
-            System.out.println(" 1- Attaque/Guérir");
-            System.out.println(" 2- Nourriture");
-            System.out.println(" 3- Se défendre");
-            System.out.println(" 4- Potion de vie");
-            int choix = sc.nextInt();
-            if (choix == 1) { // Riposte du gentil, s'il n'est pas vaincu
-                displayMessage("Le gentil " + goodOne.getName()
-                        + " attaque le méchant " + badOne.getName() + "...");
-                if (goodOne instanceof Healer) {
-                    for (Combattant elem : heros) {
-                        goodOne.fight(elem);
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Quel est ton choix ?");
+                System.out.println(" 1- Attaque/Guérir");
+                System.out.println(" 2- Nourriture");
+                System.out.println(" 3- Se défendre");
+                System.out.println(" 4- Potion de vie");
+                int choix = sc.nextInt();
+                if (choix == 1) { // Riposte du gentil, s'il n'est pas vaincu
+                    displayMessage("Le gentil " + goodOne.getName()
+                            + " attaque le méchant " + badOne.getName() + "...");
+                    if (goodOne instanceof Healer) {
+                        for (Combattant elem : heros) {
+                            goodOne.fight(elem);
+                        }
+
+                    } else {
+                        goodOne.fight(badOne);
+                    }
+                } else if (choix == 2) {
+                    goodOne.setFood(goodOne);
+                } else if (choix == 3) {
+                    goodOne.Protect(goodOne);
+                } else if (choix == 4) {
+                    goodOne.setLifePotion(goodOne);
+
+                }
+
+                if (badOne.getHealthPoint() > 0) {
+                    // Attaque de l'ennemi
+                    displayMessage("Le méchant " + badOne.getName()
+                            + " attaque le gentil " + goodOne.getName() + "...");
+                    badOne.fight(goodOne);
+                    if (goodOne.getHealthPoint() <= 0) {
+                        displayMessage("Le pauvre " + goodOne.getName() + " a été vaincu...");
+
+
+                        heros.remove(ixHero);
+
+                    }
+                } else {
+                    displayMessage("Le méchant " + badOne.getName() + " a été vaincu...");
+                    enemies.remove(ixEnemy);
+
+                                    }
+
+                // Tests de fin du jeu
+                if (heros.size() == 0) {
+
+                    displayMessage("Les héros ont perdu, c'est la fin du monde...");
+
+                    break;
+
+
+                }
+                if (enemies.size() == 0) {
+
+                    displayMessage("BRAVO, niveau suivant !!!");
+                    System.out.println("############################################################################################");
+                    for (Combattant elem: heros){
+                        System.out.println("Tu l'a mérité, "+elem.getName()+" choisis une récompense ! ");
+
+                        elem.chooseReward();
                     }
 
-                } else {
-                    goodOne.fight(badOne);
+                    break;
                 }
-            } else if (choix == 2) {
-                goodOne.setFood(goodOne);
-            } else if (choix == 3) {
-                goodOne.Protect(goodOne);
-            } else if (choix == 4) {
-                goodOne.setLifePotion(goodOne);
 
-            }
-
-            if (badOne.getHealthPoint() > 0) {
-                // Attaque de l'ennemi
-                displayMessage("Le méchant " + badOne.getName()
-                        + " attaque le gentil " + goodOne.getName() + "...");
-                badOne.fight(goodOne);
-                if (goodOne.getHealthPoint() <= 0) {
-                    displayMessage("Le pauvre " + goodOne.getName() + " a été vaincu...");
-
-
-                    heros.remove(ixHero);
-
-                }
-            } else {
-                displayMessage("Le méchant " + badOne.getName() + " a été vaincu...");
-                enemies.remove(ixEnemy);
-
-
-            }
-
-            // Tests de fin du jeu
-            if (heros.size() == 0) {
-
-                displayMessage("Les héros ont perdu, c'est la fin du monde...");
-
-                break;
-
-
-            }
-            if (enemies.size() == 0) {
-                displayMessage("BRAVO, niveau suivant !!!");
-
-                break;
-            }
-
-            // Au tour du héro suivant
-            ixHero = (ixHero + 1) % heros.size();
+                // Au tour du héro suivant
+                ixHero = (ixHero + 1 )% heros.size();
 
 
         }
-
     }
 
-
-
-
-
-
-
-            private InputParser inputParser;
+    private InputParser inputParser;
 
 
 
@@ -247,11 +248,11 @@ public class Game {
             public static void displayStatus (List < Combattant > h, List < Combattant > e){
                 System.out.println("#########################");
                 for (Combattant c : h) {
-                    System.out.print(c.getName() + "(" + c.getHealthPoint() + ") ");
+                    System.out.print(c.getName() + "(Pts de vie :" + c.getHealthPoint() + ", Pts de résistance:"+c.getProtectPoints()+") )");
                 }
                 System.out.println();
                 for (Combattant c : e) {
-                    System.out.print(c.getName() + "(" + c.getHealthPoint() + ") ");
+                    System.out.print(c.getName() + "(Pts de vie :"+ c.getHealthPoint() + ") ");
                 }
                 System.out.println();
             }

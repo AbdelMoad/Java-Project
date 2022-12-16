@@ -1,5 +1,7 @@
 package com.isep.rpg;
 
+import java.util.Scanner;
+
 public class Hunter extends Hero {
     public Hunter(String n,int h,int pp,int arrow) {
         super(n,h,pp);
@@ -14,15 +16,27 @@ public class Hunter extends Hero {
     }
     public void setLifePotion(Combattant combattant){combattant.eat(lifePotion.getHealthPoint());}
 
-    @Override
-    public void chooseReward() {
-
-    }
 
     private int arrow;
 
 
-    public void Protect(Hero hero){ hero.protect(bouclier.getProtectPoints());
+
+    public void chooseReward() {
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            String reward = scanner.nextLine();
+            switch (reward) {
+                case "1":
+                    this.bow.increaseDamagePoints();
+                case "2":
+                    take(new Food("Repas",3));
+                case "3":
+                    setProtectPoints();
+            }
+        }
+    }
+    public void setProtectPoints(){
+        this.protectPoints = protectPoints +2;
     }
 
     @Override
@@ -53,6 +67,7 @@ public class Hunter extends Hero {
     }
 
     private Bow bow;
+
     private LifePotion lifePotion;
     private Food food;
     private Bouclier bouclier;

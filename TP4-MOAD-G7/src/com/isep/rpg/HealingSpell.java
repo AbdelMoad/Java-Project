@@ -11,6 +11,9 @@ public class HealingSpell extends Potion {
     public int getHealthPoint() {
         return healthPoint;
     }
+    public void increaseHealthPoints(){
+        this.healthPoint= healthPoint +2;
+    }
 
 
     // Une sort guérit
