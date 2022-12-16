@@ -320,7 +320,7 @@ public class Game {
             }
             if (enemies.size() == 0) {
 
-                displayMessage("BRAVO, niveau suivant !!!");
+                displayMessage("BRAVO, le monde est sauvé !!!");
                 System.out.println("############################################################################################");
                 for (Combattant elem: heros){
                     System.out.println("Tu l'a mérité, "+elem.getName()+" choisis une récompense ! ");
