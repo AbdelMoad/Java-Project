@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Game {
 
-    int nbFight;
+
     private List<Combattant> heros;
     private List<Combattant> enemies;
 
@@ -137,7 +137,11 @@ public class Game {
 
     public void start() {
 
-        Random random = new Random();
+        System.out.println("Bienvenue sur Mini RPG Lite 300");
+        System.out.println("Le monde est envahi par les dragons, il faut le sauver !");
+        System.out.println("Pour cela vous aurez besoin d'appeler des héros. Mais 4 Types de héros s'offrent à vous :");
+        System.out.println("les guérriers, les guérisseuses, les mages et les chasseurs.");
+        System.out.println("Vous pourrez utiliser autant d'héros que vous voulez ! A vous de jouer !");
         int ixHero = 0;
         int ixEnemy = 0;
 
