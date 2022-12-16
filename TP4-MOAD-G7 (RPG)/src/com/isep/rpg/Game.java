@@ -7,8 +7,9 @@ import com.isep.utils.InputParser;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+
 import java.util.Scanner;
+import javax.sound.sampled.*;
 
 public class Game {
 
@@ -140,8 +141,14 @@ public class Game {
     }
 
 
-    public void start() {
+    public void start() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File mp3File = new File("C:\\Users\\moad\\Downloads\\_-RPG-Exploration-Music-Song-Of-The-Night.wav");
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(mp3File);
 
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
+        clip.start();
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
 
         int ixHero = 0;
         int ixEnemy = 0;
@@ -348,7 +355,7 @@ public class Game {
             public static void displayStatus (List < Combattant > h, List < Combattant > e){
                 System.out.println("#########################");
                 for (Combattant c : h) {
-                    System.out.print(c.getName() + "(Pts de vie :" + c.getHealthPoint() + ", Pts de résistance:"+c.getProtectPoints()+") )");
+                    System.out.print(c.getName() + "(Pts de vie :" + c.getHealthPoint() + ") )");
                 }
                 System.out.println();
                 for (Combattant c : e) {
