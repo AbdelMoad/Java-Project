@@ -18,9 +18,16 @@ public class Game {
     private List<Combattant> enemies;
 
 
-    public Game(InputParser inputParser) {
+    public Game(InputParser inputParser) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         inputParser = new ConsoleParser();
         this.inputParser = inputParser;
+        File mp3File = new File("C:\\Users\\moad\\Downloads\\_-RPG-Exploration-Music-Song-Of-The-Night.wav");
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(mp3File);
+
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
+        clip.start();
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
         System.out.println("Bienvenue sur Mini RPG Lite 300");
         pressAnyKeyToContinue();
         System.out.println("Le monde est envahi par les dragons, il faut le sauver !");
@@ -164,13 +171,7 @@ public class Game {
 
 
     public void start() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File mp3File = new File("C:\\Users\\moad\\Downloads\\_-RPG-Exploration-Music-Song-Of-The-Night.wav");
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(mp3File);
 
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInputStream);
-        clip.start();
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
 
         int ixHero = 0;
         int ixEnemy = 0;
