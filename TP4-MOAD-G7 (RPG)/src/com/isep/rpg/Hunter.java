@@ -23,6 +23,9 @@ public class Hunter extends Hero {
 
     public void chooseReward() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("1 - Plus d'Attaque (+2)");
+        System.out.println("2 - Un Repas (3 pts de vie)");
+        System.out.println("3 - Plus de protection (+2 pts de protection)");
         while (true){
             String reward = scanner.nextLine();
             switch (reward) {

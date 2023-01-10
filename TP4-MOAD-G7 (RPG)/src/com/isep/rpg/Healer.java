@@ -38,6 +38,9 @@ public class Healer extends SpellCaster{
         Scanner scanner = new Scanner(System.in);
         while (true){
             String reward = scanner.nextLine();
+            System.out.println("1 - Plus d'Attaque (+2)");
+            System.out.println("2 - Un Repas (3 pts de vie)");
+            System.out.println("3 - Plus de mana (+20)");
             switch (reward) {
                 case "1":
                     this.healingSpell.increaseHealthPoints();
@@ -57,7 +60,7 @@ public class Healer extends SpellCaster{
         this.mana = mana +20;
     }
     @Override
-    public void fight(Combattant combattant) { if (mana!=0) { combattant.heal(healingSpell.getHealthPoint()); mana=mana-1;
+    public void fight(Combattant combattant) { if (mana!=0) { combattant.heal(healingSpell.getHealthPoint()); mana=mana-5;
     } else {
         Game.displayMessage("Oups ! Il y a plus de mana");
 
