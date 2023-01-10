@@ -2,6 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    List<player> players = new ArrayList<player>();
+    List<Player> players = new ArrayList<Player>();
     GUIParser myParser = new GUIParser();
 }

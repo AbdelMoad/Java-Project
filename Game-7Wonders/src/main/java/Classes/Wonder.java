@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class wonder {
+public class Wonder {
     List<ageCard> myCards = new ArrayList<ageCard>();
     List<militaryToken> myMilitaryTokens = new ArrayList<militaryToken>();
-    List<treasure> myTreasures = new ArrayList<treasure>();
+    List<Treasure> myTreasures = new ArrayList<Treasure>();
 }
