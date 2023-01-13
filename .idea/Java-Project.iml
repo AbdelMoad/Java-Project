@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Game-7Wonders/src/main/java/Classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Game-7Wonders/src/main/java/Interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TP4-MOAD-G7/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game-7Wonders/src/main/java/com" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
