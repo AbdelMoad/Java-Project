@@ -38,4 +38,9 @@ public class Wonder {
         int result = 0;
         return result;
     }
+    public boolean IsEnoughResources(){
+        boolean result = false;
+
+        return result;
+    }
 }
