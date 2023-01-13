@@ -1,3 +1,5 @@
+import java.util.List;
+
 public abstract class ageCard {
     private int age;
     private String name;
@@ -5,5 +7,5 @@ public abstract class ageCard {
     private String category;
     private int minimumPlayers;
     private boolean direction;
-
+    protected List<Resource> requiredResources;
 }
