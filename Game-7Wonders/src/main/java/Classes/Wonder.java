@@ -59,7 +59,9 @@ public class Wonder {
     public Resource getStartingResource() {
         return startingResource;
     }
-
+    public List<Resource> getResourceLocalStage(){
+         return  localStage.getResources();
+    }
     public int countWinningPoint(){
         int result = 0;
         return result;
