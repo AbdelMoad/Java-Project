@@ -34,6 +34,18 @@ public class Wonder {
     List<militaryToken> myMilitaryTokens = new ArrayList<militaryToken>();
     List<Treasure> myTreasures = new ArrayList<Treasure>();
 
+    public String getName() {
+        return name;
+    }
+
+    public boolean isSide() {
+        return side;
+    }
+
+    public boolean isTaken() {
+        return isTaken;
+    }
+
     public int countWinningPoint(){
         int result = 0;
         return result;
