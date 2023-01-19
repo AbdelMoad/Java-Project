@@ -10,4 +10,15 @@ public class MyStage {
         effects = e;
         resources = r;
     }
+
+    public List<Effect> getEffects() {
+        return effects;
+    }
+
+    public List<Resource> getResources() {
+        return resources;
+    }
+    public int getAge() {
+        return age;
+    }
 }
