@@ -5,11 +5,13 @@ public class Wonder {
     private String name;
     private boolean isTaken;
     private boolean side;
+    private MyStage localStage;
     private Resource startingResource;
     private MyStage stage1;
     private MyStage stage2;
     private MyStage stage3;
     public Wonder(String n, boolean s, Resource r, MyStage s1, MyStage s2, MyStage s3){
+        localStage = s1;
         name = n;
         isTaken = false;
         side = s;
@@ -44,6 +46,18 @@ public class Wonder {
 
     public boolean isTaken() {
         return isTaken;
+    }
+
+    public MyStage getLocalStage() {
+        return localStage;
+    }
+
+    public void setLocalStage(MyStage localStage) {
+        this.localStage = localStage;
+    }
+
+    public Resource getStartingResource() {
+        return startingResource;
     }
 
     public int countWinningPoint(){
