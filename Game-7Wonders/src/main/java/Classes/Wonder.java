@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Wonder {
@@ -7,10 +8,12 @@ public class Wonder {
     private boolean side;
     private MyStage localStage;
     private Resource startingResource;
+    private List<Resource> availableResources = new ArrayList<>();
     private MyStage stage1;
     private MyStage stage2;
     private MyStage stage3;
     public Wonder(String n, boolean s, Resource r, MyStage s1, MyStage s2, MyStage s3){
+        availableResources.add(r);
         localStage = s1;
         name = n;
         isTaken = false;
@@ -66,9 +69,16 @@ public class Wonder {
         int result = 0;
         return result;
     }
-    public boolean IsEnoughResources(){
-        boolean result = false;
-
-        return result;
+    public boolean IsEnoughResources(List<Resource> resourcesWeNeed){
+        List<Resource> rest = this.resourcesNeed(resourcesWeNeed);
+        if (rest.isEmpty())
+            return true;
+        else return false;
+    }
+    public List<Resource> resourcesNeed(List<Resource> resourcesWeNeed){
+        ArrayList<Resource> copyAvailable = new ArrayList<Resource>();
+        Collections.copy(availableResources, copyAvailable);
+        resourcesWeNeed.removeAll(copyAvailable);
+        return resourcesWeNeed;
     }
 }
