@@ -20,7 +20,6 @@ public abstract class ageCard {
         requiredResources = r;
         effects = ef;
     }
-
     public int getAge() {
         return age;
     }
