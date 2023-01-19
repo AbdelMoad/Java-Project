@@ -30,7 +30,9 @@ public class Wonder {
         myMilitaryTokens.add(m);
     }
     public void addAgeCard(ageCard card){
-        myCards.add(card);
+        if (this.IsEnoughResources(card.requiredResources))
+            myCards.add(card);
+        else return;
     }
     public void addTreasure(Treasure t){
         myTreasures.add(t);
@@ -54,11 +56,12 @@ public class Wonder {
     public MyStage getLocalStage() {
         return localStage;
     }
-
     public void setLocalStage(MyStage localStage) {
         this.localStage = localStage;
     }
+    public void fight(){
 
+    }
     public Resource getStartingResource() {
         return startingResource;
     }
