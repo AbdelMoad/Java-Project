@@ -65,6 +65,13 @@ public class Wonder {
     public List<Resource> getResourceLocalStage(){
          return  localStage.getResources();
     }
+    public void nextStage(){
+        if (localStage.equals(stage1))
+            localStage = stage2;
+        else if (localStage.equals(stage2))
+            localStage = stage2;
+        else return;
+    }
     public int countWinningPoint(){
         int result = 0;
         return result;
