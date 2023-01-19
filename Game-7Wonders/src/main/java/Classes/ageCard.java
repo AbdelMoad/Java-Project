@@ -1,6 +1,6 @@
 import java.util.List;
 
-public abstract class ageCard {
+public class ageCard {
     private int age;
     private String name;
     private String description;
