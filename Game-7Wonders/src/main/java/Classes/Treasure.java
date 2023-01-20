@@ -1,9 +1,6 @@
-public class Treasure {
-    private int amount;
-    public Treasure (int a){
-        amount = a;
-    }
-    public int getAmount() {
-        return amount;
+public class Treasure extends Effect {
+
+    public Treasure (int w){
+        super("Treasure","Treasure coin", w);
     }
 }
