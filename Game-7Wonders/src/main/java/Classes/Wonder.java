@@ -82,7 +82,7 @@ public class Wonder {
         }
         int treasAmount = 0;
         for (Treasure treas : myTreasures) {
-            treasAmount += treas.getAmount();
+            treasAmount += treas.getWinningPoints();
         }
         result += treasAmount/3;
         if (stage1.isBuild())
