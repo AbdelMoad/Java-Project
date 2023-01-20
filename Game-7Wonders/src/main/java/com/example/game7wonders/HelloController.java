@@ -1,4 +1,4 @@
-package com.example.game7wonders;
+package example.game7wonders;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
