@@ -1,3 +1,5 @@
 public class Player {
-    Wonder myWonder = new Wonder();
+     private Wonder myWonder;
+     private String name;
+
 }

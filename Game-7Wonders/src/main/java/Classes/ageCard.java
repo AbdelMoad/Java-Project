@@ -1,6 +1,6 @@
 import java.util.List;
 
-public abstract class ageCard {
+public class ageCard {
     private int age;
     private String name;
     private String description;
@@ -19,5 +19,36 @@ public abstract class ageCard {
         direction = dir;
         requiredResources = r;
         effects = ef;
+    }
+    public int getAge() {
+        return age;
+    }
+
+    public int getMinimumPlayers() {
+        return minimumPlayers;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isDirection() {
+        return direction;
+    }
+
+    public List<Effect> getEffects() {
+        return effects;
+    }
+
+    public List<Resource> getRequiredResources() {
+        return requiredResources;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
