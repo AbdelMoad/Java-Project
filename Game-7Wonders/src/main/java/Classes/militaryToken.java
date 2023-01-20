@@ -1,9 +1,6 @@
-public class militaryToken {
+public class militaryToken extends Effect {
     private int amount;
     public militaryToken(int a){
-        amount = a;
-    }
-    public int getAmount() {
-        return amount;
+        super("militaryToken","Military Token",a);
     }
 }

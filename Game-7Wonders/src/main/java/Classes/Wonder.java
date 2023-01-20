@@ -82,9 +82,15 @@ public class Wonder {
         }
         int treasAmount = 0;
         for (Treasure treas : myTreasures) {
-            treasAmount += treas.getAmount();
+            treasAmount += treas.getWinningPoints();
         }
         result += treasAmount/3;
+        if (stage1.isBuild())
+            result += stage1.getVictoryPoints();
+        if (stage2.isBuild())
+            result += stage2.getVictoryPoints();
+        if (stage3.isBuild())
+            result += stage3.getVictoryPoints();
         return result;
     }
     public boolean IsEnoughResources(List<Resource> resourcesWeNeed){
