@@ -77,6 +77,14 @@ public class Wonder {
     }
     public int countWinningPoint(){
         int result = 0;
+        for (militaryToken mil : myMilitaryTokens) {
+            result += mil.getAmount();
+        }
+        int treasAmount = 0;
+        for (Treasure treas : myTreasures) {
+            treasAmount += treas.getAmount();
+        }
+        result += treasAmount/3;
         return result;
     }
     public boolean IsEnoughResources(List<Resource> resourcesWeNeed){
