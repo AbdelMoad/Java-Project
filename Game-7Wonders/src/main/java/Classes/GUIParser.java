@@ -7,5 +7,4 @@ public class GUIParser implements IActions{
         String name = sc.next();
         return name;
     }
-
 }

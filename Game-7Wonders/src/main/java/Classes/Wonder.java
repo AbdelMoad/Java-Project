@@ -78,7 +78,7 @@ public class Wonder {
     public int countWinningPoint(){
         int result = 0;
         for (militaryToken mil : myMilitaryTokens) {
-            result += mil.getAmount();
+            result += mil.getWinningPoints();
         }
         int treasAmount = 0;
         for (Treasure treas : myTreasures) {
